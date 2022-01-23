@@ -22,7 +22,6 @@ function computerPlay() {
 
 function playerPlay() {
     let playerSelection  = prompt("Rock-Paper-Scissors --------- Round " + round);
-    console.log(playerSelection);
     if (input.includes(playerSelection.toLowerCase())) {
         return playerSelection;
     }
