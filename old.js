@@ -115,5 +115,5 @@ function game(){
 
 
 window.onload = function() {
-    game();
+    //game();
 }

@@ -1,0 +1,194 @@
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#score-display {
+    text-align: center;
+    width: 100%;
+    margin-top: 40vh;
+    padding: 0;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+#score {
+    margin: 0;
+}
+#play {
+    margin: 0;
+}
+
+
+#player-buttons div:active{
+    animation: forwards click;
+    animation-duration: 0.2s;
+
+}
+
+#computer-container {
+    position: absolute;
+    border: 0.2em solid black;
+    width: 14.3em;
+    height: 14.3em;
+    top:2em;
+    left: calc(50% - 7.3em);
+}
+
+#computer {
+    width: 14em;
+    height: 14em;
+    background-image: url(./assets/rock.png);
+    background-position: 49% 44%;
+    background-size: 30em;
+    transform: rotate(-84deg);
+}
+
+
+#loading-container {
+    width: 100vw;
+    height: 0.2em;
+    margin-top: 2vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+#loading {
+    width: 16em;
+    height: 0.5em;
+    background-color: gray;
+}
+
+
+.load2s {
+    animation:normal loading;
+    animation-duration: 5s;
+}
+
+.load1s {
+    animation:normal loading;
+    animation-duration: 3s;
+
+}
+
+.loads {
+    animation:normal loading;
+    animation-duration: 1.5s;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+
+#rock {
+    border: 0.2em solid black;
+    border-radius: 50%;
+    background-image: url(./assets/rock.png);
+    background-position: 49% 44%;
+    background-size: 220%;
+    width: 6em;
+    height: 6em;
+    box-shadow: 0.5em -0.05em black;
+    transform: rotate(96deg);
+    position: absolute;
+    bottom: 10vw;
+    left: calc(50% - 11em);
+}
+#paper {
+    border: 0.2em solid black;
+    border-radius: 50%;
+    background-image: url(./assets/paper.png);
+    background-position: 49% 54%;
+    background-size: 200%;
+    width: 6em;
+    height: 6em;
+    box-shadow: -0.45em 0.35em black;
+    transform: rotate(-54deg);
+    position: absolute;
+    bottom: 10vw;
+    left: calc(50% - 3em);
+
+}
+
+
+#scissors {
+    border: 0.2em solid black;
+    border-radius: 50%;
+    background-image: url(./assets/scissors.png);
+    background-position: 56% 52%;
+    background-size: 200%;
+    width: 6em;
+    height: 6em;
+    box-shadow: -0.5em -0.15em black;
+    transform: rotate(-110deg);
+    position: absolute;
+    bottom: 10vw;
+    left: calc(50% + 5em)
+}
+
+.computerRock {
+    animation: forwards computer-rock;
+    animation-duration: 0.1s;
+}
+
+.computerPaper {
+    animation: forwards computer-paper;
+    animation-duration: 0.1s;
+}
+
+.computerScissors {
+    animation: forwards computer-scissors;
+    animation-duration: 0.1s;
+}
+
+
+@keyframes click {
+    to {
+        box-shadow: none;
+        border-color: #00cc32;
+        bottom: 9vw;
+    }    
+}
+
+
+@keyframes computer-rock {
+    to {
+        background-image: url(./assets/rock.png);
+        background-position: 49% 44%;
+        background-size: 30em;
+        transform: rotate(276deg);
+    }
+}
+
+@keyframes computer-paper {
+    to {
+        background-image: url(./assets/paper.png);
+        background-position: 49% 54%;
+        background-size: 28em;
+        transform: rotate(-234deg);
+    }
+} 
+
+@keyframes computer-scissors {
+    to {
+        background-image: url(./assets/scissors.png);
+        background-position: 56% 52%;
+        background-size: 28em;
+        transform: rotate(-290deg);
+    }
+} 
+    
+
+@keyframes loading  {
+    from {
+        width: 16em;
+    }
+    to {
+        width: 0;
+    }
+}

@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JaJanKen</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <p>To play the game close the promt and open the <br> browser console then refresh the page.</p>
-    <script src="index.js"></script>
+    <div id="container">
+        <div id="computer-container">
+            <div id="computer"></div>
+        </div>
+        <div id="loading-container">
+            <div id="loading"></div>
+        </div>
+        <div id="score-display">
+            <h2 id='play'>Play!</h1>
+            <h2 id="score" class="hidden">0</h2> 
+        </div>
+        <div id="player-buttons">
+            <div id="rock"></div>
+            <div id="paper"></div>
+            <div id="scissors"></div>
+        </div>
+    </div>
+    
+
+    <script src="main.js"></script>
 </body>
 </html>
